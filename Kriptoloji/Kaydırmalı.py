@@ -21,6 +21,7 @@ def main():
     secim = input("Metni şifrelemek için 'e', şifreyi çözmek için 'd' girin: ")
     if secim == 'e':
         metin = input("Şifrelemek istediğiniz metni girin: ")
+        metin = metin.replace(" ", "")
         k = int(input("Kaç harf kaydırma yapmak istediğinizi belirtin: "))
         print("Şifreli Metin:", sifrele(metin, k))
     elif secim == 'd':

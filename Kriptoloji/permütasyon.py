@@ -22,6 +22,7 @@ def permute(text, key, permutation):
 
 def main():
     text = input("Enter the text to encrypt: ")
+    text = text.replace(" ", "")
     key = int(input("Enter the key length: "))
     permutation = input("Enter the permutation (e.g., 32541): ")
 

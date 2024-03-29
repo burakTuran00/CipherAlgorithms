@@ -2,6 +2,7 @@ def encrypt(text):
     turkish_alphabet = 'abcçdefgğhıijklmnoöprsştuüvyz'
     mixed_alphabet = 'zyvüutşsrpöonmlkjiıhğgfedçcba'
     encrypted_text = ''
+    text = text.replace(" ", "")
 
     for char in text:
         if char.isalpha():
@@ -38,9 +39,11 @@ def main():
     choice = input("Enter 'e' to encrypt a message, 'd' to decrypt: ")
     if choice == 'e':
         text = input("Enter the message to encrypt: ")
+        text = text.replace(" ", "")
         print("Encrypted Text:", encrypt(text))
     elif choice == 'd':
         encrypted_text = input("Enter the encrypted message: ")
+        encrypted_text = encrypted_text.replace(" ", "")
         print("Decrypted Text:", decrypt(encrypted_text))
     else:
         print("Invalid choice!")

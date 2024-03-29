@@ -66,8 +66,10 @@ def rotate_matrix(input_str, key):
 
     return result
 
+
 # Kullanıcıdan input ve anahtar al
 input_str = input("Bir input girin: ")
+input_str = input_str.replace(" ", "")
 key = int(input("Bir anahtar girin (tam sayı): "))
 
 # Rota algoritmasını uygula ve sonucu yazdır

@@ -31,11 +31,13 @@ def main():
     choice = input("Enter 'e' to encrypt or 'd' to decrypt: ")
     if choice == 'e':
         text = input("Enter the text to encrypt: ")
+        text = text.replace(" ", "")
         key = int(input("Enter the key (number of columns): "))
         encrypted_text = encrypt(text, key)
         print("Encrypted Text:", encrypted_text)
     elif choice == 'd':
         encrypted_text = input("Enter the encrypted text: ")
+        encrypted_text = encrypted_text.replace(" ", "")
         key = int(input("Enter the key (number of columns): "))
         decrypted_text = decrypt(encrypted_text, key)
         print("Decrypted Text:", decrypted_text)

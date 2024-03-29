@@ -54,7 +54,8 @@ def caesar_cipher(message, mode):
 def main():
     mode = input("Encrypt or Decrypt? (e or d): ")
     message = input("Enter a message: ")
-
+    message = message.replace(" ", "")
+    
     if mode not in ['e', 'd']:
         print("Invalid mode. Please enter 'e' for encryption or 'd' for decryption.")
         return

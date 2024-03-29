@@ -1,6 +1,7 @@
 def linear_cipher_encrypt(text, key1, key2):
     alphabet = 'abcçdefgğhıijklmnoöprsştuüvyz'
     encrypted_text = ''
+    text = text.replace(" ", "");
 
     for char in text:
         if char.isalpha():
@@ -46,11 +47,13 @@ def main():
     choice = input("Enter 'e' to encrypt a message, 'd' to decrypt: ")
     if choice == 'e':
         text = input("Enter the message to encrypt: ")
+        text = text.replace(" ", "")
         key1 = int(input("Enter the first key value (an integer): "))
         key2 = int(input("Enter the second key value (an integer): "))
         print("Encrypted Text:", linear_cipher_encrypt(text, key1, key2))
     elif choice == 'd':
         encrypted_text = input("Enter the encrypted message: ")
+        encrypted_text = encrypted_text.replace(" ", "")
         key1 = int(input("Enter the first key value (an integer): "))
         key2 = int(input("Enter the second key value (an integer): "))
         print("Decrypted Text:", linear_cipher_decrypt(encrypted_text, key1, key2))

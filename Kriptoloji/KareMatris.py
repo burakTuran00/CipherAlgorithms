@@ -48,6 +48,7 @@ if __name__ == "__main__":
     
     # Kullanıcı girişi
     message = input("Şifrelenecek ifadeyi girin: ")
+    message = message.replace(" ", "")
     
     # Eğer mesajın uzunluğu tek ise, son karaktere rastgele bir harf ekle
     if len(message) % 2 != 0:
