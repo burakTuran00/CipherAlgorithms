@@ -72,6 +72,7 @@ def main():
         print("Encrypted Text:", encrypted_text)
     elif operation == 'd':
         text = input("Enter the text to decrypt: ")
+        text = text.replace(" ", "")
         key = int(input("Enter the number of rows in the zigzag pattern: "))
         decrypted_text = zigzag_decode(text, key)
         print("Decrypted Text:", decrypted_text)
